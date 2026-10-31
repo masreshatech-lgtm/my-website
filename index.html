@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasreTech | Premium Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0A192F',
+                            light: '#112240',
+                            dark: '#020C1B',
+                        },
+                        cyan: {
+                            DEFAULT: '#00E5FF',
+                            dark: '#00B8D4',
+                        },
+                        gold: {
+                            DEFAULT: '#FFD700',
+                            dark: '#E6C200',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon-cyan': '0 0 15px rgba(0, 229, 255, 0.25)',
+                        'neon-cyan-hover': '0 0 25px rgba(0, 229, 255, 0.5)',
+                        'neon-gold': '0 0 15px rgba(255, 215, 0, 0.25)',
+                        'neon-gold-hover': '0 0 25px rgba(255, 215, 0, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-navy text-gray-200 font-sans antialiased overflow-x-hidden selection:bg-cyan selection:text-navy">
+
+    <header class="fixed top-0 left-0 w-full z-40 bg-navy-dark/80 backdrop-blur-md border-b border-cyan/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="font-heading font-extrabold text-2xl tracking-wider text-white">
+                <span class="text-white">Masre</span><span class="text-cyan">Tech</span>
+            </a>
+            
+            <nav class="hidden lg:flex items-center space-x-8 font-heading text-sm font-semibold tracking-wide">
+                <a href="#about" class="text-gray-400 hover:text-cyan transition-colors duration-200">About</a>
+                <a href="#summary" class="text-gray-400 hover:text-cyan transition-colors duration-200">Summary</a>
+                <a href="#skills" class="text-gray-400 hover:text-cyan transition-colors duration-200">Skills</a>
+                <a href="#services" class="text-gray-400 hover:text-cyan transition-colors duration-200">Services</a>
+                <a href="#work" class="text-gray-400 hover:text-cyan transition-colors duration-200">Projects</a>
+                <a href="#education" class="text-gray-400 hover:text-cyan transition-colors duration-200">Qualifications</a>
+                <a href="#contact" class="px-5 py-2.5 bg-transparent border border-gold text-gold hover:bg-gold hover:text-navy rounded-md shadow-neon-gold transition-all duration-300">Let's Connect</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-cyan text-2xl focus:outline-none p-1 rounded">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-72 bg-navy-dark/90 backdrop-blur-lg border-l border-cyan/10 transform translate-x-full transition-transform duration-300 ease-in-out z-50 flex flex-col pt-24 px-8 space-y-5 shadow-2xl lg:hidden">
+            <button id="mobile-menu-close" class="absolute top-6 right-6 text-cyan text-2xl focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <a href="#about" class="block text-gray-300 hover:text-cyan py-1 text-lg font-heading transition-colors">About</a>
+            <a href="#summary" class="block text-gray-300 hover:text-cyan py-1 text-lg font-heading transition-colors">Summary</a>
+            <a href="#skills" class="block text-gray-300 hover:text-cyan py-1 text-lg font-heading transition-colors">Skills</a>
+            <a href="#services" class="block text-gray-300 hover:text-cyan py-1 text-lg font-heading transition-colors">Services</a>
+            <a href="#work" class="block text-gray-300 hover:text-cyan py-1 text-lg font-heading transition-colors">Projects</a>
+            <a href="#education" class="block text-gray-300 hover:text-cyan py-1 text-lg font-heading transition-colors">Qualifications</a>
+            <div class="pt-4">
+                <a href="#contact" class="block text-center px-5 py-3 bg-transparent border border-gold text-gold hover:bg-gold hover:text-navy rounded-md shadow-neon-gold font-heading font-semibold transition-all duration-300">Let's Connect</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-grid">
+
+        <section id="hero" class="min-h-screen flex items-center justify-center pt-24 pb-12 px-6 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy/50 to-navy z-0"></div>
+            
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left" data-aos="fade-right" data-aos-duration="1200">
+                    <div class="inline-flex items-center space-x-2 bg-cyan/10 border border-cyan/20 px-4 py-1.5 rounded-full text-cyan text-sm font-semibold tracking-wide">
+                        <i class="fa-solid fa-microchip animate-pulse"></i>
+                        <span>Welcome to MasreTech Studio</span>
+                    </div>
+                    <h1 class="font-heading font-extrabold text-5xl sm:text-6xl lg:text-7xl tracking-tight text-white leading-none">
+                        <span class="text-gold">Masresha M.</span>
+                    </h1>
+                    <h2 class="font-heading text-lg sm:text-xl lg:text-2xl font-bold tracking-wide text-cyan-dark">
+                        Digital Marketing Specialist <span class="text-gray-500 font-light">|</span> Content Creator <span class="text-gray-500 font-light">|</span> Graphic & Video Editor
+                    </h2>
+                    <p class="text-lg sm:text-xl text-gray-300 font-medium max-w-2xl mx-auto lg:mx-0">
+                        Transforming IT Knowledge and Creative Visions into Measurable Digital Growth.
+                    </p>
+                    <p class="text-gray-400 max-w-xl mx-auto lg:mx-0 text-base border-l-2 border-gold/40 pl-4 italic">
+                        "Helping brands turn attention into engagement and engagement into results."
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2.5 justify-center lg:justify-start pt-2">
+                        <span class="bg-navy-light text-gray-300 px-3.5 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider border border-gray-800">Digital Marketing</span>
+                        <span class="bg-navy-light text-gray-300 px-3.5 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider border border-gray-800">Content Creation</span>
+                        <span class="bg-navy-light text-gray-300 px-3.5 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider border border-gray-800">Graphic Design</span>
+                        <span class="bg-navy-light text-gray-300 px-3.5 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider border border-gray-800">Video Editing</span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start pt-6 items-center">
+                        <a href="#contact" class="px-8 py-4 bg-gold hover:bg-gold-dark text-navy font-heading font-bold rounded-md shadow-neon-gold hover:shadow-neon-gold-hover text-center transition-all duration-300 whitespace-nowrap">
+                            <i class="fa-solid fa-paper-plane mr-2"></i>Hire Me Today
+                        </a>
+                        <a href="#work" class="px-8 py-4 bg-transparent border border-cyan text-cyan hover:bg-cyan/10 font-heading font-bold rounded-md shadow-neon-cyan hover:shadow-neon-cyan-hover text-center transition-all duration-300 whitespace-nowrap">
+                            <i class="fa-solid fa-briefcase mr-2"></i>View Work Samples
+                        </a>
+                        <a href="#" class="px-6 py-4 text-gray-400 hover:text-white border-b-2 border-transparent hover:border-gold transition-all duration-300 font-heading font-semibold text-center whitespace-nowrap">
+                            <i class="fa-solid fa-download mr-2"></i>Download CV
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center items-center relative mt-8 lg:mt-0" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="w-72 h-72 sm:w-96 sm:h-96 rounded-full relative flex items-center justify-center p-3 border-2 border-dashed border-cyan/30 animate-[spin_120s_linear_infinite]">
+                        <div class="absolute -top-2 left-1/2 w-4 h-4 bg-cyan rounded-full shadow-[0_0_10px_#00E5FF]"></div>
+                        <div class="absolute -bottom-2 left-1/2 w-4 h-4 bg-gold rounded-full shadow-[0_0_10px_#FFD700]"></div>
+                    </div>
+                    <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full absolute border-4 border-cyan shadow-neon-cyan overflow-hidden bg-navy-dark flex items-center justify-center">
+                        <img src="https://i.postimg.cc/vB2YVYT8/photo-5904432503097855618-y.jpg" alt="Masresha M. Profile Picture" class="w-full h-full object-cover rounded-full responsive-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="glow-line"></div>
+
+        <section id="about" class="py-24 px-6 max-w-7xl mx-auto overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <div class="lg:col-span-7 space-y-6" data-aos="fade-right" data-aos-offset="200">
+                    <h2 class="font-heading font-extrabold text-4xl text-white tracking-tight">
+                        Hello, I'm <span class="text-gold">Masresha</span>.
+                    </h2>
+                    <p class="text-gray-300 text-lg leading-relaxed text-justify">
+                        Passionate Digital Marketing Specialist and Content Creator with a strong Information Technology background. Skilled at transforming complex ideas into engaging visual content that audiences understand and remember. Experienced in creating impactful digital experiences across multiple platforms. Combining technical expertise, creativity, and strategic thinking to help brands grow in the digital world.
+                    </p>
+
+                    <div class="bg-navy-light/50 border border-cyan/10 p-6 rounded-xl mt-8 shadow-lg">
+                        <h3 class="font-heading text-lg font-bold text-white mb-4 flex items-center">
+                            <i class="fa-solid fa-bullseye text-gold mr-3"></i>Target Clients I Serve
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-navy-dark px-4 py-2 rounded border border-cyan/20 text-sm text-cyan font-medium">Ambitious Personal Brands</span>
+                            <span class="bg-navy-dark px-4 py-2 rounded border border-cyan/20 text-sm text-cyan font-medium">Freelancers</span>
+                            <span class="bg-navy-dark px-4 py-2 rounded border border-cyan/20 text-sm text-cyan font-medium">SMEs</span>
+                            <span class="bg-navy-dark px-4 py-2 rounded border border-cyan/20 text-sm text-cyan font-medium">Technology Companies</span>
+                            <span class="bg-navy-dark px-4 py-2 rounded border border-cyan/20 text-sm text-cyan font-medium">Corporate Organizations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 space-y-4" data-aos="fade-left" data-aos-offset="200">
+                    <h3 class="font-heading font-bold text-xl text-white tracking-wide mb-2 uppercase text-center lg:text-left">
+                        Core Specializations
+                    </h3>
+                    
+                    <div class="bg-navy-light border border-gray-800 hover:border-cyan/40 p-5 rounded-xl transition-all duration-300 flex items-center space-x-4 group shadow-md" data-aos="fade-left" data-aos-delay="100">
+                        <div class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center text-cyan text-xl group-hover:bg-cyan group-hover:text-navy transition-all duration-300">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold text-white">Content Creation</h4>
+                        </div>
+                    </div>
+
+                    <div class="bg-navy-light border border-gray-800 hover:border-cyan/40 p-5 rounded-xl transition-all duration-300 flex items-center space-x-4 group shadow-md" data-aos="fade-left" data-aos-delay="200">
+                        <div class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center text-cyan text-xl group-hover:bg-cyan group-hover:text-navy transition-all duration-300">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold text-white">Video Editing</h4>
+                        </div>
+                    </div>
+
+                    <div class="bg-navy-light border border-gray-800 hover:border-cyan/40 p-5 rounded-xl transition-all duration-300 flex items-center space-x-4 group shadow-md" data-aos="fade-left" data-aos-delay="300">
+                        <div class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center text-cyan text-xl group-hover:bg-cyan group-hover:text-navy transition-all duration-300">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold text-white">Graphic Design</h4>
+                        </div>
+                    </div>
+
+                    <div class="bg-navy-light border border-gray-800 hover:border-cyan/40 p-5 rounded-xl transition-all duration-300 flex items-center space-x-4 group shadow-md" data-aos="fade-left" data-aos-delay="400">
+                        <div class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center text-cyan text-xl group-hover:bg-cyan group-hover:text-navy transition-all duration-300">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold text-white">Social Media Strategy</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="glow-line"></div>
+
+        <section id="summary" class="py-24 bg-navy-dark/40 px-6">
+            <div class="max-w-5xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+                    Professional Summary
+                </h2>
+                <div class="w-24 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+                <p class="bg-clip-text text-transparent bg-gradient-to-r from-cyan via-blue-400 to-gold font-extrabold text-xl font-heading mt-4 tracking-wide">
+                    The Bridge Between Technology and Marketing
+                </p>
+            </div>
+
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-navy-light p-6 rounded-xl border border-gray-800 flex items-start space-x-4 shadow-md" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="text-gold text-2xl pt-1"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <p class="text-gray-300 text-base leading-relaxed">Graduated at the top of my class in IT with a GPA of 3.69.</p>
+                    </div>
+
+                    <div class="bg-navy-light p-6 rounded-xl border border-gray-800 flex items-start space-x-4 shadow-md" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="text-cyan text-2xl pt-1"><i class="fa-brands fa-youtube"></i></div>
+                        <p class="text-gray-300 text-base leading-relaxed">Developed hands-on creative expertise through building and managing the MasreTech YouTube channel.</p>
+                    </div>
+
+                    <div class="bg-navy-light p-6 rounded-xl border border-gray-800 flex items-start space-x-4 shadow-md" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="text-cyan text-2xl pt-1"><i class="fa-solid fa-gears"></i></div>
+                        <p class="text-gray-300 text-base leading-relaxed">Combine technical problem-solving skills with modern digital marketing strategies.</p>
+                    </div>
+
+                    <div class="bg-navy-light p-6 rounded-xl border border-gray-800 flex items-start space-x-4 shadow-md" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="text-gold text-2xl pt-1"><i class="fa-solid fa-chart-line"></i></div>
+                        <p class="text-gray-300 text-base leading-relaxed">Deliver visually compelling and technically optimized content that drives measurable growth.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="border-2 border-cyan shadow-neon-cyan rounded-xl overflow-hidden bg-navy-dark group transition-transform duration-300 hover:scale-[1.01]">
+                        <img src="https://via.placeholder.com/600x400" alt="MasreTech Technology Workspace Architecture Infrastructure" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="glow-line"></div>
+
+        <section id="skills" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">Skills & Technical Proficiencies</h2>
+                <div class="w-24 h-1 bg-cyan mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-navy-light p-6 rounded-xl border border-cyan/10 space-y-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-heading font-bold text-lg text-gold border-b border-gray-800 pb-3 flex items-center">
+                        <i class="fa-solid fa-star mr-2.5 text-sm"></i>Core Specializations
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-semibold text-gray-300">
+                                <span>Video Editing</span>
+                                <span class="text-cyan">95%</span>
+                            </div>
+                            <div class="w-full bg-navy-dark h-2 rounded-full overflow-hidden">
+                                <div class="bg-cyan h-full rounded-full transition-all duration-1000" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-semibold text-gray-300">
+                                <span>Graphic Design</span>
+                                <span class="text-cyan">90%</span>
+                            </div>
+                            <div class="w-full bg-navy-dark h-2 rounded-full overflow-hidden">
+                                <div class="bg-cyan h-full rounded-full transition-all duration-1000" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-semibold text-gray-300">
+                                <span>Social Media Management</span>
+                                <span class="text-cyan">88%</span>
+                            </div>
+                            <div class="w-full bg-navy-dark h-2 rounded-full overflow-hidden">
+                                <div class="bg-cyan h-full rounded-full transition-all duration-1000" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-navy-light p-6 rounded-xl border border-cyan/10 space-y-4 shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-heading font-bold text-lg text-gold border-b border-gray-800 pb-3 flex items-center">
+                        <i class="fa-solid fa-laptop-code mr-2.5 text-sm"></i>Marketing & Tech
+                    </h3>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1.5 bg-navy-dark border border-cyan/30 rounded text-sm text-gray-200 shadow-neon-cyan transition-transform duration-300 hover:scale-105"><i class="fa-solid fa-robot text-cyan mr-2"></i>AI Video Generation</span>
+                        <span class="px-3 py-1.5 bg-navy-dark border border-cyan/30 rounded text-sm text-gray-200 shadow-neon-cyan transition-transform duration-300 hover:scale-105"><i class="fa-solid fa-magnifying-glass text-cyan mr-2"></i>SEO Fundamentals</span>
+                        <span class="px-3 py-1.5 bg-navy-dark border border-cyan/30 rounded text-sm text-gray-200 shadow-neon-cyan transition-transform duration-300 hover:scale-105"><i class="fa-brands fa-meta text-cyan mr-2"></i>Meta Advertising</span>
+                        <span class="px-3 py-1.5 bg-navy-dark border border-cyan/30 rounded text-sm text-gray-200 shadow-neon-cyan transition-transform duration-300 hover:scale-105"><i class="fa-solid fa-chess text-cyan mr-2"></i>Content Strategy</span>
+                        <span class="px-3 py-1.5 bg-navy-dark border border-cyan/30 rounded text-sm text-gray-200 shadow-neon-cyan transition-transform duration-300 hover:scale-105"><i class="fa-solid fa-stethoscope text-cyan mr-2"></i>IT Diagnostics</span>
+                    </div>
+                </div>
+
+                <div class="bg-navy-light p-6 rounded-xl border border-cyan/10 space-y-4 shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="font-heading font-bold text-lg text-gold border-b border-gray-800 pb-3 flex items-center">
+                        <i class="fa-solid fa-user-check mr-2.5 text-sm"></i>Professional Strengths
+                    </h3>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1.5 bg-navy-dark border border-gold/30 rounded text-sm text-gray-200 shadow-neon-gold transition-transform duration-300 hover:scale-105"><i class="fa-solid fa-lightbulb text-gold mr-2"></i>Creative Problem Solving</span>
+                        <span class="px-3 py-1.5 bg-navy-dark border border-gold/30 rounded text-sm text-gray-200 shadow-neon-gold transition-transform duration-300 hover:scale-105"><i class="fa-solid fa-sliders text-gold mr-2"></i>Adaptability</span>
+                        <span class="px-3 py-1.5 bg-navy-dark border border-gold/30 rounded text-sm text-gray-200 shadow-neon-gold transition-transform duration-300 hover:scale-105"><i class="fa-solid fa-comments text-gold mr-2"></i>Clear Communication</span>
+                        <span class="px-3 py-1.5 bg-navy-dark border border-gold/30 rounded text-sm text-gray-200 shadow-neon-gold transition-transform duration-300 hover:scale-105"><i class="fa-solid fa-brain text-gold mr-2"></i>Analytical Thinking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="glow-line"></div>
+
+        <section id="services" class="py-24 bg-navy-dark/40 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">Services I Provide</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-navy-light p-8 rounded-xl border border-gray-800 hover:border-cyan transition-all duration-300 hover:-translate-y-1 hover:shadow-neon-cyan group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-cyan/10 rounded-xl flex items-center justify-center text-cyan text-2xl group-hover:bg-cyan group-hover:text-navy transition-all duration-300 mb-6">
+                        <i class="fa-solid fa-bezier-curve"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-4">Graphic Design</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-gold mr-2.5"></i>YouTube Thumbnails</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-gold mr-2.5"></i>Logo Design</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-gold mr-2.5"></i>Social Media Graphics</li>
+                    </ul>
+                </div>
+
+                <div class="bg-navy-light p-8 rounded-xl border border-gray-800 hover:border-cyan transition-all duration-300 hover:-translate-y-1 hover:shadow-neon-cyan group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-cyan/10 rounded-xl flex items-center justify-center text-cyan text-2xl group-hover:bg-cyan group-hover:text-navy transition-all duration-300 mb-6">
+                        <i class="fa-solid fa-clapperboard"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-4">Video Editing & Motion Content</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-gold mr-2.5"></i>Reels & TikTok Videos</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-gold mr-2.5"></i>YouTube Content Editing</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-gold mr-2.5"></i>AI-Generated Videos</li>
+                    </ul>
+                </div>
+
+                <div class="bg-navy-light p-8 rounded-xl border border-gray-800 hover:border-cyan transition-all duration-300 hover:-translate-y-1 hover:shadow-neon-cyan group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-cyan/10 rounded-xl flex items-center justify-center text-cyan text-2xl group-hover:bg-cyan group-hover:text-navy transition-all duration-300 mb-6">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-4">Social Media Management</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-gold mr-2.5"></i>Comprehensive Content Planning</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-gold mr-2.5"></i>Content Calendar Development</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-gold mr-2.5"></i>Audience & Community Engagement</li>
+                    </ul>
+                </div>
+
+                <div class="bg-navy-light p-8 rounded-xl border border-gray-800 hover:border-cyan transition-all duration-300 hover:-translate-y-1 hover:shadow-neon-cyan group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-cyan/10 rounded-xl flex items-center justify-center text-cyan text-2xl group-hover:bg-cyan group-hover:text-navy transition-all duration-300 mb-6">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-4">Digital Content Strategy</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-gold mr-2.5"></i>End-to-End Content Planning</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-gold mr-2.5"></i>Data-Backed Organic Growth Strategies</li>
+                        <li class="flex items-center"><i class="fa-regular fa-square-check text-gold mr-2.5"></i>Brand Identity Structural Optimization</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="glow-line"></div>
+
+        <section id="work" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">Featured Projects</h2>
+                <div class="w-24 h-1 bg-cyan mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="space-y-12">
+                <div class="bg-navy-light rounded-xl border border-gray-800 overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:border-cyan/30 transition-all duration-300 shadow-lg group" data-aos="fade-up">
+                   <!-- የዩቲዩብ ቪዲዮ ኮድ መጀመሪያ -->
+<div class="lg:col-span-5 relative min-h-[250px] lg:min-h-full overflow-hidden bg-navy-dark">
+   <!-- የYouTube ምስል (Thumbnail) ሊንክ -->
+   <a href="https://www.youtube.com/watch?v=HFp7SpIcOFg" target="_blank" class="block w-full h-full relative">
+      <!-- እዚህ የቪዲዮውን thumbnail ምስል ያስገቡ -->
+      <img src="https://img.youtube.com/vi/HFp7SpIcOFg/maxresdefault.jpg" alt="MasreTech Video" class="w-full h-full object-cover">
+      
+      <!-- የPlay ቁልፍ ምልክት -->
+      <div class="absolute inset-0 flex items-center justify-center">
+         <div class="bg-red-600 text-white rounded-full p-4 text-3xl">▶</div>
+      </div>
+   </a>
+</div>
+<!-- የዩቲዩብ ቪዲዮ መጨረሻ -->
+                    <div class="p-8 lg:col-span-7 space-y-4 flex flex-col justify-center">
+                        <h3 class="font-heading font-bold text-2xl text-white group-hover:text-cyan transition-colors">MasreTech YouTube Channel</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <span class="text-xs font-bold text-cyan tracking-wider font-mono block uppercase">Objective</span>
+                                <p class="text-gray-300 text-sm">Build a highly engaging educational technology channel.</p>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-gold tracking-wider font-mono block uppercase">Key Activities</span>
+                                <p class="text-gray-300 text-sm">Designed high-converting YouTube thumbnails; Edited fast-paced tech videos; Leveraged cutting-edge AI tools.</p>
+                            </div>
+                            <div class="pt-2 border-t border-gray-800">
+                                <span class="text-xs font-bold text-emerald-400 tracking-wider font-mono block uppercase">Results</span>
+                                <p class="text-emerald-400 font-semibold text-sm">100+ organic subscribers accumulated rapidly with a premium custom visual identity setup.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-navy-light rounded-xl border border-gray-800 overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:border-cyan/30 transition-all duration-300 shadow-lg group" data-aos="fade-up">
+                    <div class="lg:col-span-5 relative min-h-[240px] lg:min-h-full overflow-hidden bg-navy-dark">
+                        <img src="https://i.postimg.cc/xdNjzkhM/photo-5904432503097855623-y.jpg" alt="Solo Bags & Habesha Brew Campaign Showcase" class="w-full h-full object-cover absolute inset-0 transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-navy-dark/20 mix-blend-multiply"></div>
+                    </div>
+                    <div class="p-8 lg:col-span-7 space-y-4 flex flex-col justify-center">
+                        <h3 class="font-heading font-bold text-2xl text-white group-hover:text-cyan transition-colors">Solo Bags & Habesha Brew Brand Campaigns</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <span class="text-xs font-bold text-cyan tracking-wider font-mono block uppercase">Objective</span>
+                                <p class="text-gray-300 text-sm">Increase macro-level brand awareness and engagement metrics across platforms.</p>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-gold tracking-wider font-mono block uppercase">Key Activities</span>
+                                <p class="text-gray-300 text-sm">Developed structured 30-day cross-platform content calendars; Produced highly targeted professional promotional creatives.</p>
+                            </div>
+                            <div class="pt-2 border-t border-gray-800">
+                                <span class="text-xs font-bold text-emerald-400 tracking-wider font-mono block uppercase">Results</span>
+                                <p class="text-emerald-400 font-semibold text-sm">Significantly upgraded multi-channel outreach and visibility targets across intended demographics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-navy-light rounded-xl border border-gray-800 overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:border-cyan/30 transition-all duration-300 shadow-lg group" data-aos="fade-up">
+                    <div class="lg:col-span-5 relative min-h-[240px] lg:min-h-full overflow-hidden bg-navy-dark">
+                        <img src="https://via.placeholder.com/600x400" alt="Technical Training Project Showcase" class="w-full h-full object-cover absolute inset-0 transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-navy-dark/20 mix-blend-multiply"></div>
+                    </div>
+                    <div class="p-8 lg:col-span-7 space-y-4 flex flex-col justify-center">
+                        <h3 class="font-heading font-bold text-2xl text-white group-hover:text-cyan transition-colors">Technical Training (IT & Networking)</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <span class="text-xs font-bold text-cyan tracking-wider font-mono block uppercase">Objective</span>
+                                <p class="text-gray-300 text-sm">Simplify complex technology concepts into understandable formats.</p>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-gold tracking-wider font-mono block uppercase">Key Activities</span>
+                                <p class="text-gray-300 text-sm">Delivered standard high-quality network routing/switching training sessions; Authored detailed companion technical visual guides.</p>
+                            </div>
+                            <div class="pt-2 border-t border-gray-800">
+                                <span class="text-xs font-bold text-emerald-400 tracking-wider font-mono block uppercase">Results</span>
+                                <p class="text-emerald-400 font-semibold text-sm">Successfully engineered enhanced concept retention curves for professional teams.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="glow-line"></div>
+
+        <section id="education" class="py-24 bg-navy-dark/40 px-6 max-w-7xl mx-auto overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <div class="space-y-6" data-aos="fade-right">
+                    <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white flex items-center">
+                        <i class="fa-solid fa-graduation-cap text-gold mr-3"></i>Education
+                    </h2>
+                    <div class="bg-navy-light p-6 rounded-xl border border-gray-800 shadow-md">
+                        <span class="text-cyan font-bold font-mono text-sm block mb-1">GRADUATED WITH DISTINCTION</span>
+                        <h3 class="font-heading font-bold text-xl text-white">BSc in Information Technology</h3>
+                        <p class="text-gold font-semibold text-sm mt-1">Samara University, Ethiopia | 2021 - 2024/2025</p>
+                        <p class="text-gray-400 mt-2 font-medium">Academic Merits: Accumulated GPA: 3.69</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6" data-aos="fade-left">
+                    <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white flex items-center">
+                        <i class="fa-solid fa-certificate text-cyan mr-3"></i>Certifications
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="bg-navy-light p-4 rounded-lg border border-gray-800 flex items-center space-x-4 shadow-sm">
+                            <div class="text-cyan text-xl"><i class="fa-brands fa-google"></i></div>
+                            <p class="text-gray-200 font-semibold text-base">Google Fundamentals of Digital Marketing</p>
+                        </div>
+                        <div class="bg-navy-light p-4 rounded-lg border border-gray-800 flex items-center space-x-4 shadow-sm">
+                            <div class="text-orange-500 text-xl"><i class="fa-brands fa-hubspot"></i></div>
+                            <p class="text-gray-200 font-semibold text-base">HubSpot Inbound Marketing Certification</p>
+                        </div>
+                        <div class="bg-navy-light p-4 rounded-lg border border-gray-800 flex items-center space-x-4 shadow-sm">
+                            <div class="text-gold text-xl"><i class="fa-solid fa-award"></i></div>
+                            <p class="text-gray-200 font-semibold text-base">QIYAS Digital Marketing Mastery</p>
+                        </div>
+						<div class="bg-navy-light p-4 rounded-lg border border-gray-800 flex items-center space-x-4 shadow-sm">
+                            <div class="text-gold text-xl"><i class="fa-solid fa-award"></i></div>
+                            <p class="text-gray-200 font-semibold text-base">Certificate of Appreciation</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="glow-line"></div>
+
+        <section id="tools" class="py-24 px-6 max-w-7xl mx-auto text-center">
+            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-16" data-aos="fade-up">Tools I Master</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-navy-light p-6 rounded-xl border border-gray-800 shadow-md" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="font-heading font-bold text-white mb-4 text-center pb-2 border-b border-gray-800 text-cyan">Creative Suite</h3>
+                    <div class="grid grid-cols-2 gap-3 text-sm font-semibold text-gray-300">
+                        <div class="bg-navy-dark p-2.5 rounded border border-gray-800 text-center">Canva</div>
+                        <div class="bg-navy-dark p-2.5 rounded border border-gray-800 text-center">CapCut</div>
+                        <div class="bg-navy-dark p-2.5 rounded border border-gray-800 text-center">Adobe Premiere</div>
+                        <div class="bg-navy-dark p-2.5 rounded border border-gray-800 text-center">Adobe Photoshop</div>
+                        <div class="bg-navy-dark p-2.5 rounded border border-gray-800 text-center col-span-2">AI Creative Tools</div>
+                    </div>
+                </div>
+
+                <div class="bg-navy-light p-6 rounded-xl border border-gray-800 shadow-md" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="font-heading font-bold text-white mb-4 text-center pb-2 border-b border-gray-800 text-cyan">Marketing Infrastructure</h3>
+                    <div class="grid grid-cols-1 gap-3 text-sm font-semibold text-gray-300">
+                        <div class="bg-navy-dark p-2.5 rounded border border-gray-800 text-center"><i class="fa-brands fa-meta text-blue-500 mr-2"></i>Meta Business Suite</div>
+                        <div class="bg-navy-dark p-2.5 rounded border border-gray-800 text-center"><i class="fa-brands fa-youtube text-red-500 mr-2"></i>YouTube Studio</div>
+						<div class="bg-navy-dark p-2.5 rounded border border-gray-800 text-center"><i class="fa-brands fa-tiktok text-white-500 mr-2"></i>TikTok Studio</div>
+                    </div>
+                </div>
+
+                <div class="bg-navy-light p-6 rounded-xl border border-gray-800 shadow-md" data-aos="zoom-in" data-aos-delay="300">
+                    <h3 class="font-heading font-bold text-white mb-4 text-center pb-2 border-b border-gray-800 text-cyan">Technical Architecture</h3>
+                    <div class="grid grid-cols-1 gap-3 text-sm font-semibold text-gray-300">
+                        <div class="bg-navy-dark p-2.5 rounded border border-gray-800 text-center"><i class="fa-solid fa-microchip text-gold mr-2"></i>Hardware Diagnostics</div>
+                        <div class="bg-navy-dark p-2.5 rounded border border-gray-800 text-center"><i class="fa-solid fa-network-wired text-gold mr-2"></i>Networking Protocols</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="glow-line"></div>
+
+        <section id="achievements" class="py-24 bg-navy-dark/40 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-heading font-extrabold text-3xl text-white tracking-tight text-center mb-12" data-aos="fade-up">Key Achievements</h2>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4 bg-navy-light p-5 rounded-lg border-l-4 border-gold shadow-md" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-gold text-xl flex-shrink-0"><i class="fa-solid fa-trophy"></i></div>
+                        <p class="text-gray-200 text-base font-medium">Graduated with distinction in IT (GPA: 3.69).</p>
+                    </div>
+
+                    <div class="flex items-center space-x-4 bg-navy-light p-5 rounded-lg border-l-4 border-cyan shadow-md" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-cyan text-xl flex-shrink-0"><i class="fa-solid fa-video"></i></div>
+                        <p class="text-gray-200 text-base font-medium">Produced high-quality tech-focused video projects.</p>
+                    </div>
+
+                    <div class="flex items-center space-x-4 bg-navy-light p-5 rounded-lg border-l-4 border-gold shadow-md" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-gold text-xl flex-shrink-0"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <p class="text-gray-200 text-base font-medium">Empowered professionals and teams through high-impact IT and networking training programs.</p>
+                    </div>
+
+                    <div class="flex items-center space-x-4 bg-navy-light p-5 rounded-lg border-l-4 border-cyan shadow-md" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-cyan text-xl flex-shrink-0"><i class="fa-solid fa-chart-pie"></i></div>
+                        <p class="text-gray-200 text-base font-medium">Developed content strategies for multiple industries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="glow-line"></div>
+
+        <section id="contact" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="bg-navy-light rounded-2xl border border-cyan/20 p-8 md:p-12 shadow-neon-cyan relative overflow-hidden" data-aos="zoom-in" data-aos-offset="100">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+                    
+                    <div class="lg:col-span-6 flex flex-col justify-center">
+                        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white leading-tight mb-4">
+                            Ready to Bring Your Digital Vision to Life? <span class="text-gold">Let's Work Together.</span>
+                        </h2>
+                        <p class="text-gray-400 mb-6">
+                            Get in touch for digital diagnostics, marketing consultancies, or project development deployments.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-medium mb-8">
+                            <div class="flex items-center space-x-3 text-gray-300">
+                                <i class="fa-solid fa-envelope text-cyan text-lg w-6"></i>
+                                <a href="mailto:masreshamanaye766@gmail.com" class="hover:text-cyan transition-colors text-sm truncate">masreshamanaye766@gmail.com</a>
+                            </div>
+                            <div class="flex items-center space-x-3 text-gray-300">
+                                <i class="fa-solid fa-phone text-cyan text-lg w-6"></i>
+                                <a href="tel:+251970405425" class="hover:text-cyan transition-colors text-sm">+251 970 405 425</a>
+                            </div>
+                            <div class="flex items-center space-x-3 text-gray-300">
+                                <i class="fa-solid fa-location-dot text-gold text-lg w-6"></i>
+                                <span class="text-sm">Addis Ababa, Ethiopia</span>
+                            </div>
+                        </div>
+
+                        <form action="https://formspree.io/f/xldnvklg" method="POST" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <input type="text" name="Name" placeholder="Your Name" required class="w-full bg-navy-dark border border-gray-800 rounded px-4 py-3 text-gray-300 focus:outline-none focus:border-cyan focus:ring-1 focus:ring-cyan transition-colors">
+                                <input type="email" name="Email" placeholder="Your Email" required class="w-full bg-navy-dark border border-gray-800 rounded px-4 py-3 text-gray-300 focus:outline-none focus:border-cyan focus:ring-1 focus:ring-cyan transition-colors">
+                            </div>
+                            <input type="text" name="Subject" placeholder="Subject" required class="w-full bg-navy-dark border border-gray-800 rounded px-4 py-3 text-gray-300 focus:outline-none focus:border-cyan focus:ring-1 focus:ring-cyan transition-colors">
+                            <textarea name="Message" rows="4" placeholder="Your Message" required class="w-full bg-navy-dark border border-gray-800 rounded px-4 py-3 text-gray-300 focus:outline-none focus:border-cyan focus:ring-1 focus:ring-cyan transition-colors resize-none"></textarea>
+                            <button type="submit" class="w-full bg-gold text-navy font-bold font-heading py-3 rounded hover:bg-gold-dark transition-all duration-300 shadow-neon-gold hover:shadow-neon-gold-hover">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="lg:col-span-6 flex items-center justify-center lg:justify-end mt-12 lg:mt-0">
+                        <div class="w-full max-w-sm bg-navy-dark border border-gray-800 p-6 rounded-xl space-y-4 shadow-xl">
+                            <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+                                <span class="font-heading font-extrabold tracking-wider text-sm text-white"><span class="text-white">Masre</span><span class="text-cyan">Tech</span> Secure Comm</span>
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                            </div>
+                            <div class="font-mono text-xs text-cyan/70 space-y-1">
+                                <p>&gt; INITIALIZING SECURE PROTOCOL...</p>
+                                <p>&gt; STATUS: ENCRYPTED CHANNEL READY</p>
+                                <p>&gt; ROUTING TO: TELEGRAM_NODE</p>
+                            </div>
+                            <a href="https://t.me/masre_5" target="_blank" class="block w-full py-3 bg-cyan text-navy hover:bg-cyan-dark font-heading font-bold text-center rounded transition-all duration-300 shadow-neon-cyan">
+                                <i class="fa-brands fa-telegram mr-2"></i>Connect on Telegram
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-navy-dark py-12 px-6 border-t border-gray-900 text-center text-sm text-gray-500 relative z-30">
+        <div class="flex flex-wrap justify-center items-center gap-6 mb-8">
+            <a href="https://t.me/masre_tech" target="_blank" class="text-gray-400 text-2xl hover:text-cyan hover:-translate-y-1.5 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://linkedin.com/in/masreshamanaye" target="_blank" class="text-gray-400 text-2xl hover:text-cyan hover:-translate-y-1.5 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" target="_blank" class="text-gray-400 text-2xl hover:text-cyan hover:-translate-y-1.5 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" target="_blank" class="text-gray-400 text-2xl hover:text-cyan hover:-translate-y-1.5 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]"><i class="fa-brands fa-github"></i></a>
+            <a href="#" target="_blank" class="text-gray-400 text-2xl hover:text-cyan hover:-translate-y-1.5 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" target="_blank" class="text-gray-400 text-2xl hover:text-cyan hover:-translate-y-1.5 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" target="_blank" class="text-gray-400 text-2xl hover:text-cyan hover:-translate-y-1.5 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]"><i class="fa-brands fa-medium"></i></a>
+        </div>
+        
+        <p class="font-heading font-bold text-gray-400 mb-2 text-lg">MasreTech</p>
+        <p>&copy; 2026 MasreTech. All Rights Reserved. Engineered with precision.</p>
+    </footer>
+
+    <div id="masre-chat-window" class="fixed bottom-24 right-6 w-[340px] max-w-[calc(100vw-2rem)] bg-navy-dark rounded-2xl border border-cyan shadow-[0_0_20px_rgba(0,229,255,0.2)] z-50 hidden flex-col overflow-hidden transition-all duration-300">
+        
+        <div class="bg-navy-light px-4 py-3 border-b border-cyan/30 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-cyan/10 rounded-full flex items-center justify-center border border-cyan/50">
+                    <i class="fa-solid fa-robot text-cyan text-sm"></i>
+                </div>
+                <span class="font-heading font-bold text-white text-sm tracking-wide">MasreTech AI</span>
+            </div>
+            <button id="close-chat-btn" class="text-gray-400 hover:text-white transition-colors focus:outline-none">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+        
+        <div id="chat-messages" class="h-64 overflow-y-auto p-4 space-y-3 bg-navy-dark/95 border-b border-cyan/10 flex flex-col items-start chat-scrollbar">
+            </div>
+
+        <div class="p-3 bg-navy-light/50 border-b border-cyan/10 flex gap-2">
+            <input type="text" id="chat-input" placeholder="Ask about skills, projects, CV..." class="w-full bg-navy-dark border border-gray-800 rounded px-3 py-2 text-xs text-gray-300 placeholder-gray-500 focus:outline-none focus:border-cyan focus:ring-1 focus:ring-cyan transition-colors">
+            <button id="chat-send-btn" class="bg-cyan text-navy px-3.5 py-2 rounded font-bold text-xs hover:bg-cyan-dark transition-colors flex items-center justify-center">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+
+        <div class="p-2 bg-navy-dark/90 text-center">
+            <a href="https://t.me/masre_tech" target="_blank" class="block w-full text-center text-gold text-xs font-bold py-2 border border-gold/30 rounded-lg hover:bg-gold hover:text-navy transition-all duration-300">
+                <i class="fa-brands fa-telegram mr-1.5"></i>Direct Chat on Telegram
+            </a>
+        </div>
+    </div>
+
+    <button id="chat-fab-btn" class="fixed bottom-6 right-6 w-14 h-14 bg-navy rounded-full border-2 border-cyan shadow-neon-cyan flex items-center justify-center z-50 hover:scale-110 hover:shadow-neon-cyan-hover transition-all duration-300 focus:outline-none animate-[bounce_2.5s_infinite]">
+        <i class="fa-solid fa-robot text-cyan text-2xl"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
